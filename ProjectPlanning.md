@@ -43,6 +43,7 @@ License Requirements:
 ## Data Fetching and Exploration
 
 - Git Large File Storage required
+- 06/24/2024 - 1:30pm meeting with House of Hope to review Data NaN (how to fill data) and best thoughts for data imputation, and Questionnaire organization and content.
 
 ## Data Cleaning and Transformation
 
