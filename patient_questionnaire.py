@@ -2,6 +2,7 @@ import pandas as pd
 import tkinter as tk
 from tkinter import ttk, messagebox
 
+# Create a class for the Patient Questionnaire application
 class PatientQuestionnaireApp:
     def __init__(self, root):
         self.root = root
