@@ -15,6 +15,24 @@ Get Access: NSDUH Restricted-use Data SAMHSA has partnered with the National Cen
 
 License Requirements:
 
+_Privacy of Study Respondents_
+
+Any intentional identification of an individual or organization, or unauthorized disclosure of
+identifiable information, violates the promise of confidentiality given to the providers of the
+information. Disclosure of identifiable information may also be punishable under federal law.
+Therefore, users of data agree to:
+Use these data sets solely for research or statistical purposes, and not for investigation or re-
+identification of specific individuals or organizations.
+Make no use of the identity of any individual discovered inadvertently, and report any such discovery
+to SAMHSA (BHSIS_HelpDesk@eagletechva.com).
+
+_Public Domain Notice_
+
+All material appearing in this document is in the public domain and may be reproduced or copied
+without permission from SAMHSA. Citation of the source is appreciated. This publication may
+not be reproduced or distributed for a fee without specific, written authorization of the Office of
+Communications, SAMHSA, U.S. Department of Health and Human Services.
+
 ### Dataset 2
 
 ## Set up communication and project Management
@@ -33,7 +51,7 @@ License Requirements:
 - Project planning
 - Define requirements - Large dataset model
 - Define requirements functions (pipeline)
-- Define requirements questionnaire - intake questions(10-15, multi-select and y/n answers) to create Micro dataset execution through the trained model (Unique identifier for client for anomilty)
+- Define requirements questionnaire - intake questions(10-15, multi-select and y/n answers) to create Micro dataset execution through the trained model (Unique identifier for client for Anonymous)
 - Pipeline integration
 - Questionnaire integration
 - Step 10
