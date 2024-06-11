@@ -109,7 +109,7 @@ X_scaler = scaler.fit(X_train)
 X_train_scaled = X_scaler.transform(X_train)
 X_test_scaled = X_scaler.transform(X_test)
  # Create the decision tree classifier instance
-model = tree.DecisionTreeClassifier()
+model = RandomForestClassifier()
  # Fit the model
 model = model.fit(X_train_scaled, y_train)
 
