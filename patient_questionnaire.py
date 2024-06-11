@@ -71,13 +71,13 @@ class PatientQuestionnaireApp:
         self.create_label_entry("Pregnant at Admission", 9, self.yes_no_options())
         self.create_label_entry("Veteran Status", 10, self.yes_no_options())
         self.create_label_entry("Living Arrangements at Admission", 11, self.living_arrangements_options())
-        self.create_label_entry("Source of Income/Support", 12, self.income_support_options())
-        self.create_label_entry("Number of Arrests in Past 30 Days", 13, self.arrests_options())
+        self.create_label_entry("Primary Scource of Payment", 12, self.prime_pay_options())
+        self.create_label_entry("Census Division", 13, self.Census_Division())
         # Treatment Information
         self.create_label_entry("Type of Treatment/Service Setting at Admission", 14, self.treatment_setting_options())
-        self.create_label_entry("Medication-assisted Opioid Therapy", 15, self.yes_no_options())
+        self.create_label_entry("Meth Use?", 15, self.yes_no_options())
         self.create_label_entry("Days Waiting to Enter Substance Use Treatment", 16, self.days_waiting_options())
-        self.create_label_entry("Reason for Discharge", 17, self.discharge_reason_options())
+        self.create_label_entry("How often will you use Self-Help Programs after?", 17, self.FREQ_ATND_SELF_HELP_D())
         self.create_label_entry("Length of Stay in Treatment (days)", 18, self.length_of_stay_options())
         # Substance Use Information
         self.create_label_entry("Primary Substance Use at Admission", 19, self.substance_use_options())
@@ -114,10 +114,10 @@ class PatientQuestionnaireApp:
         columns = [
             "CASEID", "DISYR", "AGE", "GENDER", "RACE", "ETHNIC",
             "MARSTAT", "EDUC", "EMPLOY", "PREG",
-            "VET", "LIVARAG", "PRIMINC",
-            "ARRESTS", "SERVICES",
+            "VET", "LIVARAG", "PRIMPAY",
+            "DIVISION", "SERVICES",
             "METHUSE", "DAYWAIT",
-            "REASON", " LOS", "SUB1",
+            "FREQ_ATND_SELF_HELP_D", " LOS", "SUB1",
             "ROUTE1", "FREQ1", "FRSTUSE1",
             "SUB2", "ROUTE2"
         ]
@@ -170,10 +170,10 @@ class PatientQuestionnaireApp:
         return ["Yes", "No"]
     def living_arrangements_options(self):
         return ["Homeless", "Dependent living", "Independent living"]
-    def income_support_options(self):
-        return ["Wages/salary", "Public assistance", "Retirement/pension", "Disability", "Other", "None"]
-    def arrests_options(self):
-        return ["None", "Once", "Two or more times"]
+    def prime_pay_options(self):
+        return ["Self-pay", "Private insurance", "Medicare", " Medicaid", "Other government payments", " No charge", "Other"]
+    def Census_Division(self):
+        return ["U.S. territories", "New England", "Middle Atlantic", "East North Central", "West North Central", "South Atlantic", "East South Central", "West South Central", "Mountain", "Pacific"]
     def treatment_setting_options(self):
         return [
             "Detox, 24-hour, hospital inpatient", "Detox, 24-hour, free-standing residential", "Rehab/residential, hospital (non-detox)",
@@ -182,10 +182,10 @@ class PatientQuestionnaireApp:
         ]
     def days_waiting_options(self):
         return ["0", "1–7", "8–14", "15–30", "31 or more"]
-    def discharge_reason_options(self):
+    def FREQ_ATND_SELF_HELP_D(self):
         return [
-            "Treatment completed", "Dropped out of treatment", "Terminated by facility", "Transferred to another treatment program or facility",
-            "Incarcerated", "Death", "Other"
+            "No attendance", "1–3 times per month", "4–7 times per month", "8–30 times per month",
+            "Some attendance, frequency is unknown"
         ]
     def length_of_stay_options(self):
         return [
